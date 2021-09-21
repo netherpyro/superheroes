@@ -5,8 +5,12 @@ part 'biography.g.dart';
 @JsonSerializable(fieldRename: FieldRename.kebab)
 class Biography {
   final String fullName;
+  final String alignment;
 
-  Biography(this.fullName);
+  Biography({
+    required this.fullName,
+    required this.alignment,
+  });
 
   factory Biography.fromJson(final Map<String, dynamic> json) =>
       _$BiographyFromJson(json);
