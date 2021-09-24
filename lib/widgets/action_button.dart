@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:superheroes/resources/superheroes_colors.dart';
 
@@ -17,19 +16,20 @@ class ActionButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            color: SuperheroesColors.blue,
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+        decoration: const BoxDecoration(
+          color: SuperheroesColors.blue,
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+        ),
+        child: Text(
+          text.toUpperCase(),
+          style: const TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w700,
+            color: Colors.white,
           ),
-          child: Text(
-            text.toUpperCase(),
-            style: const TextStyle(
-              fontWeight: FontWeight.w700,
-              color: Colors.white,
-              fontSize: 14,
-            ),
-          )),
+        ),
+      ),
     );
   }
 }
